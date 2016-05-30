@@ -1,0 +1,56 @@
+Part 1: Discussion Questions
+
+Runtime
+    1. the workload would be linear or O(n) since the runtime would increase with the size of the list (n).
+
+    2.  O(1) -> constant
+        O(log n) -> log n, logarithmic
+        O(n) -> linear
+        O(n log n) -> n log n, logarithmic
+        O(n2) -> quadratic
+        O(2n) exponential
+
+Stacks and Queues
+    1a. Stack
+    1b. Queue
+    1c. Stack
+
+    2.
+
+    3.
+
+Linked Lists
+    1. Each node is comprised of one large "box" split into two things. The data part of the node is the string attached to it (either "Apple, Berry, or Cherry") and a "next" attribute which is denoted with a little arrow. The head of the list is the first node in the linked list and in this case it is the node with the data "Apple". The head has to be explicitly set when the linked list is being created. The tail the last node in the linked list and currently set to the node with the data "cherry". The tail's next attribute always points to "None".
+
+    2. A doubly linked list will allow you to traverse the list in both directions and a singly linked list will not. Nodes in a doubly linked list will have two attributes, one pointing to the "next" node and one pointing to the "previous" node.
+
+    3. If you keep track of the tail in a linked list then you always know where the end is and it's faster to just change a new node to being the "tail" when you want to add a node to the linked lsit. 
+
+Trees
+    1. Breadth First Search Order
+        to get to "burrito"
+            Starts with [food]
+            Not food, add children: [Italian, Indian, Mexican]
+            Pop Italian, not Italian, add children to end [Indian, Mexican, lasagna, pizza]
+            Pop Indian, not Indian, add children [Mexican, lasagna, pizza, tikka masala, saag]
+            Pop Mexican, not Mexican, add children: [ lasagna, pizza, tikka masala, saag, burrito, tacos, enchiladas]
+            Pop lasagna, not lasagna, no children to add, move on: [pizza, tikka masala, saag, burrito, tacos, enchiladas]
+            Pop pizza, not pizza, add children: [tikka masala, saag, burrito, tacos, enchiladas, thin crus, chicago style, new york style, sicilian]
+            Pop tikka masala, not tikka masala, no children, move on: [saag, burrito, tacos, enchiladas, thin crus, chicago style, new york style, sicilian]
+            Pop saag, not saag, no children, move on: [burrito, tacos, enchiladas, thin crus, chicago style, new york style, sicilian]
+            Pop burrito, node found!
+    2. Depth First Search Order
+        to get to "chicago style"
+            Starts with: [food]
+            Not food, moves to food's children: [Italian, Indian, Mexican]
+            Pop Mexican, not Mexican, add children: [Italian, Indian, burrito, tacos, enchiladas]
+            Pop Mexican's children one by one, not any of them, left with: [Italian, Indian]
+            Pop Indian, not Indian, add children: [Italian, tikka masala, saag]
+            Pop Indian's children one by one, not them, left with: [Italian]
+            Pop Italian, not Italian, add children: [lasagna, pizza]
+            Pop pizza, not pizza, add children: [lasagna, sicilian, new york style, chicago style, thin crust]
+            Pop pizza children until (not sicilian or ny-style) reaching chicago style
+            Node Found: Chicago-Style
+
+
+    3. A binary search tree will never have more than two children and you can have the children point to the parents, rather than the parents pointing to the children. There are also some binary trees where the children and parents point to each other.
